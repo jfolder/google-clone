@@ -1,0 +1,298 @@
+/**********************************************
+GENERAL
+***********************************************/
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.group:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+/**********************************************
+HEADER
+***********************************************/
+header {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:50px;
+	text-align: right;
+}
+
+header ul {
+	list-style-type: none;
+	padding-top:5px;
+	padding-right:30px;
+}
+
+
+header ul li {
+	float:right;
+	display: inline-block;
+	font-family: sans-serif;
+}
+
+/*** first 3 hyper links ***/
+header ul li:nth-last-child(-n + 3) {
+	font-size: 13px;
+	line-height: 13px;
+	margin-top:18.5px;
+	margin-bottom:18.5px;
+	margin-left:17px;
+}
+
+header ul li:nth-last-child(-n + 3) a {
+	text-decoration: none;
+	color: #333;
+}
+
+header ul li:nth-last-child(-n + 3) a:hover {
+	text-decoration: underline;
+}
+/*******************************/
+
+
+/*** grid and sign-in button ***/
+header ul li:nth-child(-n + 2) {
+	margin-left: 18px;
+}
+/*******************************/
+
+
+/*** grid button ***/
+header ul li div.grid_btn {
+	width:22px;
+	height:22px;
+	margin-top:14px;
+	margin-bottom:14px;
+	background-image: url('../img/grid_original.png');
+	background-size:22px 22px;
+}
+
+header ul li div.grid_btn:hover {
+	background-image: url('../img/grid_over.png');
+}
+/***********************/
+
+/* Sign-in Button */
+li.signin {
+	margin-top:10px;
+	width:70px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	font-size:13px;
+	font-weight:700;
+	border-radius: 3px;
+	background-color: #4486F9;
+	color: white;
+
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-radial-gradient(center, ellipse closest-corner, #4585F3 0%, #4486F9 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(center, ellipse closest-corner, #4585F3 0%, #4486F9 100%);
+
+	/* Opera */ 
+	background-image: -o-radial-gradient(center, ellipse closest-corner, #4585F3 0%, #4486F9 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, center center, 0, center center, 413, color-stop(0, #4585F3), color-stop(1, #4486F9));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(center, ellipse closest-corner, #4585F3 0%, #4486F9 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: radial-gradient(ellipse closest-corner at center, #4585F3 0%, #4486F9 100%);
+}
+
+li.signin:after {
+	content: "Sign in";
+}
+
+/*
+.signin a {
+	text-decoration: none;
+	color: white;
+}
+*/
+
+li.signin:hover {
+	box-shadow: 1px 1px 1px rgba(68, 134, 249, .5);
+	text-decoration: none;
+}
+
+
+/**********************************************
+PAGE: index.html;
+***********************************************/
+div.vertical_anchor {
+	height: 50%;
+	margin: 0 auto;
+}
+
+section {
+	height:200px;
+	margin-top:-130px;
+	text-align: center;
+}
+
+input {
+	width: 560px;
+	height: 25px;
+	background: url('../img/microphone.png') no-repeat right;
+	background-size: 25px 25px;
+	border: 1px solid #D9D9D9;
+	margin-top: 15px;
+	padding-right: 30px;
+}
+
+input:hover {
+	border: 1px solid #B2B2B2;
+}
+
+/*** gray button positioning ***/
+section ul {
+	list-style-type: none;
+	margin-top:15px;
+}
+
+section ul li {
+	display: inline-block;
+}
+
+section ul li:first-child {
+	position: absolute;
+	left: 0;
+	width:50%;
+	text-align: right;
+}
+
+section ul li:last-child {
+	position: absolute;
+	right: 0;
+	width:50%;
+	text-align: left;
+}
+
+/*** gray button styling ***/
+body section ul li div {
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	font-family: sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	background-color: #F2F2F2;
+	border: 1px solid #C6C6C6;
+	border-radius:3px;
+	text-align: center;
+	color: #333;
+}
+
+/*** google search button ***/
+section ul li div:hover {
+	box-shadow: 0px 1px 3px rgba(198, 198, 198, .5);
+	background-color: #f7f7f7;
+}
+
+section ul li:nth-child(1) div {
+	width: 100px;
+	margin-right: 7.5px;
+}
+
+section ul li:nth-child(1) div:after {
+	content: "Google Search";
+}
+
+/*** i'm feeling lucky button ***/
+section ul li:nth-child(2) div {
+	width:110px;
+	margin-left:7.5px;
+	text-align: left;
+	padding-left:12px;
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+
+section ul li:nth-child(2) div:after {
+	content: "I\'m Feeling Lucky";
+
+}
+
+section ul li:nth-child(2) div:hover {
+	padding-right:10px;
+}
+
+section ul li:nth-child(2) div:hover:after {
+	content: "I\'m Feeling Hungry";
+}
+
+/**********************************************
+FOOTER
+***********************************************/
+footer {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height:40px;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f2f2f2;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li
+{
+	display: inline-block;
+	line-height: 40px;
+	font-size:13px;
+	font-family: sans-serif;
+}
+
+footer ul li a {
+	color: #777;
+	text-decoration: none;
+}
+
+footer ul li a:hover {
+	text-decoration: underline;
+}
+
+footer ul:first-child {
+	position: absolute;
+	left:0;
+	bottom:0;
+	width: 50%;
+	text-align: left;
+}
+
+footer ul:first-child li {
+	margin-left:30px;
+}
+
+footer ul:last-child {
+	position: absolute;
+	right:0;
+	bottom:0;
+	width:50%;
+	text-align: right;
+}
+
+footer ul:last-child li {
+	margin-right:30px;
+}
